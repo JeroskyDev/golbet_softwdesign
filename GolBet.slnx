@@ -11,9 +11,7 @@
   <Folder Name="/Golbet.Services/Interfaces/">
     <File Path="IMatchService.cs" />
   </Folder>
-  <Folder Name="/Golbet.Services/Mapping/">
-    <File Path="MappingProfile.cs" />
-  </Folder>
+  <Folder Name="/Golbet.Services/Mapping/" />
   <Project Path="GolBet.Entities/GolBet.Entities.csproj" />
   <Project Path="GolBet.Repositories/GolBet.Repositories.csproj" />
   <Project Path="GolBet.Web/GolBet.Web.csproj" />

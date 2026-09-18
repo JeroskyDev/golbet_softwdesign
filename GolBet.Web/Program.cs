@@ -22,11 +22,11 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 // Specific repositories 
 builder.Services.AddScoped<IMatchRepository, MatchRepository>();
 
-// AutoMapper: scans the assembly containing MappingProfile for all profiles 
-builder.Services.AddAutoMapper(typeof(MappingProfile));
-
 // Business services 
 builder.Services.AddScoped<IMatchService, MatchService>();
+
+// AutoMapper
+builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
 
 var app = builder.Build();
 
@@ -58,14 +58,3 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-
-namespace GolBet.Services.Mapping
-{
-    public class MappingProfile : Profile
-    {
-        public MappingProfile()
-        {
-            // Add CreateMap<TSource, TDestination>() mappings here.
-        }
-    }
-}
