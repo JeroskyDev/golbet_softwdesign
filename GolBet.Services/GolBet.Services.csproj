@@ -1,9 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GolBet.Repositories\GolBet.Repositories.csproj" />
     <ProjectReference Include="..\GolBet.Entities\GolBet.Entities.csproj" />
   </ItemGroup>
+	
+	<ItemGroup>
+	</ItemGroup>
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>

@@ -2,6 +2,18 @@
   <Folder Name="/Golbet.Services/">
     <Project Path="Golbet.Services/GolBet.Services.csproj" />
   </Folder>
+  <Folder Name="/Golbet.Services/DTOs/">
+    <File Path="MatchDto.cs" />
+  </Folder>
+  <Folder Name="/Golbet.Services/Implementations/">
+    <File Path="MatchService.cs" />
+  </Folder>
+  <Folder Name="/Golbet.Services/Interfaces/">
+    <File Path="IMatchService.cs" />
+  </Folder>
+  <Folder Name="/Golbet.Services/Mapping/">
+    <File Path="MappingProfile.cs" />
+  </Folder>
   <Project Path="GolBet.Entities/GolBet.Entities.csproj" />
   <Project Path="GolBet.Repositories/GolBet.Repositories.csproj" />
   <Project Path="GolBet.Web/GolBet.Web.csproj" />
