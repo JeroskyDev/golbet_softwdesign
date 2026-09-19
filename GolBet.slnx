@@ -3,6 +3,7 @@
     <Project Path="Golbet.Services/GolBet.Services.csproj" />
   </Folder>
   <Folder Name="/Golbet.Services/DTOs/">
+    <File Path="MatchDetailDto.cs" />
     <File Path="MatchDto.cs" />
   </Folder>
   <Folder Name="/Golbet.Services/Implementations/">
