@@ -30,6 +30,8 @@ builder.Services.AddScoped<IMatchRepository, MatchRepository>();
 // Business services 
 builder.Services.AddScoped<IMatchService, MatchService>();
 
+builder.Services.AddScoped<ITeamService, TeamService>();
+
 // AutoMapper
 builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
 
