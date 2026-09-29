@@ -5,12 +5,20 @@
   <Folder Name="/Golbet.Services/DTOs/">
     <File Path="MatchDetailDto.cs" />
     <File Path="MatchDto.cs" />
+    <File Path="MatchFormDto.cs" />
+    <File Path="TeamDto.cs" />
+    <File Path="TeamFormDto.cs" />
+  </Folder>
+  <Folder Name="/Golbet.Services/Helpers/">
+    <File Path="DateTimeExtensionsService.cs" />
   </Folder>
   <Folder Name="/Golbet.Services/Implementations/">
     <File Path="MatchService.cs" />
+    <File Path="TeamService.cs" />
   </Folder>
   <Folder Name="/Golbet.Services/Interfaces/">
     <File Path="IMatchService.cs" />
+    <File Path="ITeamService.cs" />
   </Folder>
   <Folder Name="/Golbet.Services/Mapping/" />
   <Project Path="GolBet.Entities/GolBet.Entities.csproj" />
