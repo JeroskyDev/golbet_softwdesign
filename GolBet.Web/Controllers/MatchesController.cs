@@ -4,6 +4,9 @@ using GolBet.Services.DTOs;
 using GolBet.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;   // SelectList 
+using Microsoft.AspNetCore.Authorization;
+using GolBet.Repositories.Data;
+
 
 namespace GolBet.Web.Controllers;
 
@@ -105,6 +108,13 @@ public class MatchesController : Controller
         await _matchService.DeactivateAsync(id);
         TempData["Success"] = "Partido desactivado.";
         return RedirectToAction(nameof(Index));
+    }
+
+    [Authorize(Roles = DbSeeder.AdminRole)]
+    public async Task<IActionResult> Create()
+    {
+        await LoadTeamsAsync();
+        return View(new MatchFormDto());
     }
 
     private async Task LoadTeamsAsync()

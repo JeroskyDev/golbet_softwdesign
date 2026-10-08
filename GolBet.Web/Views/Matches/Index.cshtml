@@ -67,6 +67,11 @@
                             <div class="fw-bold small">@match.HomeTeamName</div>
                         </div>
 
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a asp-action="Create" class="btn btn-success">+ Nuevo partido</a>
+                        }
+
                         <div class="px-3 text-nowrap">
                             @if (match.Status == MatchStatus.Finished)
                             {
