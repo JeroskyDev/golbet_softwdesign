@@ -39,10 +39,6 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = "/Account/AccessDenied";  // wrong role 
 });
 
-// --- in the pipeline, before app.UseAuthorization() --- 
-app.UseAuthentication();   // who are you?  (reads the cookie, builds User) 
-app.UseAuthorization();    // may you do this?  (evaluates [Authorize]) 
-
 // Open generic registration: one line, a repository for every entity 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
@@ -81,7 +77,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

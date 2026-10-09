@@ -32,7 +32,10 @@
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>⚽Cartelera de partidos</h2>
-    <a asp-action="Create" class="btn btn-success">+ Nuevo partido</a>
+    @if (User.IsInRole("Admin"))
+    {
+        <a asp-action="Create" class="btn btn-success">+ Nuevo partido</a>
+    }
 </div>
 
 <h2 class="mb-4">⚽ Cartelera de partidos</h2>
@@ -66,11 +69,6 @@
                                  alt="@match.HomeTeamName" width="60" height="60" class="mb-1" />
                             <div class="fw-bold small">@match.HomeTeamName</div>
                         </div>
-
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <a asp-action="Create" class="btn btn-success">+ Nuevo partido</a>
-                        }
 
                         <div class="px-3 text-nowrap">
                             @if (match.Status == MatchStatus.Finished)

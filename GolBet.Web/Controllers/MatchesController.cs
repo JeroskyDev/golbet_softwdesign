@@ -37,6 +37,7 @@ public class MatchesController : Controller
     }
 
     // GET /Matches/Create 
+    [Authorize(Roles = DbSeeder.AdminRole)]
     public async Task<IActionResult> Create()
     {
         await LoadTeamsAsync();
@@ -44,6 +45,7 @@ public class MatchesController : Controller
     }
 
     // POST /Matches/Create
+    [Authorize(Roles = DbSeeder.AdminRole)]
     [HttpPost, ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(MatchFormDto dto)
     {
@@ -68,6 +70,7 @@ public class MatchesController : Controller
     }
 
     // GET /Matches/Edit/5
+    [Authorize(Roles = DbSeeder.AdminRole)]
     public async Task<IActionResult> Edit(int id)
     {
         var dto = await _matchService.GetForEditAsync(id);
@@ -78,6 +81,7 @@ public class MatchesController : Controller
     }
 
     // POST /Matches/Edit   (este es el que te faltaba)
+    [Authorize(Roles = DbSeeder.AdminRole)]
     [HttpPost, ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(MatchFormDto dto)
     {
@@ -102,6 +106,7 @@ public class MatchesController : Controller
     }
 
     // POST /Matches/Deactivate/5
+    [Authorize(Roles = DbSeeder.AdminRole)]
     [HttpPost, ValidateAntiForgeryToken]
     public async Task<IActionResult> Deactivate(int id)
     {
@@ -111,11 +116,6 @@ public class MatchesController : Controller
     }
 
     [Authorize(Roles = DbSeeder.AdminRole)]
-    public async Task<IActionResult> Create()
-    {
-        await LoadTeamsAsync();
-        return View(new MatchFormDto());
-    }
 
     private async Task LoadTeamsAsync()
     {
