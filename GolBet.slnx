@@ -3,6 +3,8 @@
     <Project Path="Golbet.Services/GolBet.Services.csproj" />
   </Folder>
   <Folder Name="/Golbet.Services/DTOs/">
+    <File Path="BetDto.cs" />
+    <File Path="BetFormDto.cs" />
     <File Path="MatchDetailDto.cs" />
     <File Path="MatchDto.cs" />
     <File Path="MatchFormDto.cs" />
@@ -13,10 +15,12 @@
     <File Path="DateTimeExtensionsService.cs" />
   </Folder>
   <Folder Name="/Golbet.Services/Implementations/">
+    <File Path="BetService.cs" />
     <File Path="MatchService.cs" />
     <File Path="TeamService.cs" />
   </Folder>
   <Folder Name="/Golbet.Services/Interfaces/">
+    <File Path="IBetService.cs" />
     <File Path="IMatchService.cs" />
     <File Path="ITeamService.cs" />
   </Folder>
