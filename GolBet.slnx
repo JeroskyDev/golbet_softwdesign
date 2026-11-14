@@ -8,6 +8,8 @@
     <File Path="MatchDetailDto.cs" />
     <File Path="MatchDto.cs" />
     <File Path="MatchFormDto.cs" />
+    <File Path="MatchResultFormDto.cs" />
+    <File Path="ResolutionSummaryDto.cs" />
     <File Path="TeamDto.cs" />
     <File Path="TeamFormDto.cs" />
   </Folder>
